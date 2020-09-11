@@ -1,0 +1,134 @@
+.clients {
+  background-color: $color-background-gray;
+
+  @include flex(row, center, center);
+
+  @include desktop {
+    max-height: 365px;
+  }
+
+  &__title {
+    @include font-heading;
+  
+    @include mobile {
+      margin-top: 50px;
+    }
+  
+    @include desktop {
+      font-size: 60px;
+    }
+  }
+}
+
+
+.clients-content {
+  @include flex(column, center, center);
+  width: 60%;
+  padding: 5%;
+
+  @include mobile-w {
+    width: 90%;
+  }
+
+  @include tablet {
+    width: 80%;
+  }
+
+  @include laptop {
+    width: 80%;
+  }
+}
+
+
+.client-list {
+  @include flex(row, center, space-between);
+  width: 100%;
+  margin-bottom: 70px;
+  margin-top: 90px;
+
+  @include mobile {
+    margin-bottom: 50px;
+  }
+
+  @include mobile-w {
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  @include tablet {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  &__company {
+    margin-left: 2%;
+    margin-right: 2%;
+
+    @include mobile-w {
+      width: 44%;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+    @include mobile {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+
+    @include tablet {
+      width: 44%;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+  }
+
+  &__Microsoft {
+    font-size: 41px;
+    color: #ced2e0;
+
+    @include mobile {
+      font-size: 35px;
+    }
+  }
+
+  &__Samsung {
+    font-size: 28px;
+    color: #ced2e0;
+
+    @include mobile {
+      font-size: 23px;
+    }
+  }
+
+  &__IBM {
+    font-size: 52px;
+    color: #ced2e0;
+
+    @include mobile {
+      font-size: 45px;
+    }
+  }
+
+  &__Google {
+    font-size: 56px;
+    color: #ced2e0;
+
+    @include mobile {
+      font-size: 40px;
+    }
+  }
+}

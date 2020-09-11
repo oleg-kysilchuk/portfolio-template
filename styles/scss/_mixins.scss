@@ -1,0 +1,23 @@
+@mixin flex($dir, $align, $justify) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font-heading {
+    font-family: $font;
+    font-size: 50px;
+    font-weight: 300;
+    color: $color-headings;
+    text-transform: capitalize;
+}
+
+@mixin font-description {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-text;
+  line-height: 2.2;
+  text-align: center;
+}

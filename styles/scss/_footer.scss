@@ -1,0 +1,87 @@
+.page-footer {
+  background-image: url("./assets/images/backgr_footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  @include flex(row, center, center);
+
+  @include mobile {
+    height: 350px;
+  }
+
+  @include mobile-w {
+    height: 350px;
+  }
+}
+
+.footer-content {
+  margin: 0 auto;
+  width: 80%;
+  @include flex(row, center, center);
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    margin: 0;
+  }
+
+  @include mobile-w {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include font-heading;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 3.2%;
+
+    @include laptop {
+      font-size: 40px;
+    }
+    @include tablet {
+      font-size: 30px;
+    }
+    @include mobile-w {
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    @include mobile {
+      font-size: 20px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include font-heading;
+    color: rgba(255, 255, 255, 0.8);
+  
+    @include laptop {
+      font-size: 40px;
+    }
+    @include tablet {
+      font-size: 30px;
+    }
+    @include mobile-w {
+      font-size: 30px;
+    }
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  
+  &__btn-hire {
+    @include mobile-w {
+      margin: 0 auto;
+    }
+    @include mobile {
+      margin: 0 auto;
+    }
+  }
+
+}
+

@@ -1,0 +1,204 @@
+.expert-in {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  max-width: 100vw;
+  height: 1300px;
+  background-color: $color-background-gray;
+  @include flex(row, center, center);
+
+  @include mobile {
+    height: 2320px;
+  }
+
+  @include mobile-w {
+    height: 1400px;
+  }
+
+  @include tablet {
+    height: 1400px;
+  }
+
+  @include laptop {
+    height: 1100px;
+  }
+}
+
+.content {
+  width: 60%;
+  height: inherit;
+  @include flex(column, center, space-around);
+
+  @include mobile {
+    width: 90%;
+  }
+
+  @include mobile-w {
+    width: 80%;
+  }
+
+  @include tablet {
+    width: 80%;
+  }
+
+  @include laptop {
+    width: 70%;
+  }
+}
+
+.section-title {
+  @include font-heading;
+
+  @include desktop {
+    font-size: 60px;
+  }
+}
+
+.skills {
+  width: 100%;
+  height: 780px;
+  @include flex(row, flex-end, space-between);
+  flex-wrap: wrap;
+
+  @include mobile {
+    @include flex(column, center, space-between);
+    flex-wrap: nowrap;
+    height: 2120px;
+  }
+
+  @include mobile-w {
+    height: 1200px;
+  }
+
+  @include tablet {
+    height: 1200px;
+  }
+
+  @include laptop {
+    height: 850px;
+  }
+
+  @include desktop {
+    @include flex(row, center, space-between);
+    height: 1150px;
+  }
+}
+
+.skills-item {
+  width: 30%;
+  height: 350px;
+  @include flex(column, center, space-between);
+
+  @include mobile {
+    width: 70%;
+    max-width: 265px;
+    height: 320px;
+  }
+
+  @include mobile-w {
+    width: 40%;
+    height: 350px;
+  }
+
+  @include tablet {
+    width: 40%;
+    height: 350px;
+  }
+
+  @include laptop {
+    width: 27%;
+    height: 400px;
+  }
+
+  @include desktop {
+    height: 450px;
+    max-width: 300px;
+  }
+
+  &__picture {
+    width: 60%;
+    padding-top: 59.241%;
+    position: relative;
+    border: solid 1px #b7c0c9;
+    border-radius: 100%;
+    @include flex(row, center, center);
+
+    &:hover {
+      border: 1px solid $color-headings;
+      background-color: $color-headings;
+    }
+
+    &:hover .skills-item__icon {
+      color: white;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: $color-headings;
+
+    @include desktop {
+      font-size: 80px;
+    }
+  }
+
+  &__title {
+    color: $color-headings;
+    font-family: $font;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: 20px;
+    }
+
+    @include mobile-w {
+      font-size: 22px;
+    }
+
+    @include tablet {
+      font-size: 22px;
+    }
+
+    @include laptop {
+      font-size: 22px;
+    }
+
+    @include desktop {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    @include font-description;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        width: 100%;
+    }
+
+    @include mobile {
+      font-size: 13px;
+    }
+
+    @include mobile-w {
+      font-size: 13px;
+    }
+
+    @include tablet {
+      font-size: 13px;
+    }
+
+    @include laptop {
+      font-size: 15px;
+    }
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+}
